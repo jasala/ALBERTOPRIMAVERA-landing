@@ -1,0 +1,113 @@
+<?php $background = PUBLIC_PATH."img/bg-footer.jpg"; ?>
+<footer class="py-5 bg-secondary" style="background: url(<?= $background ?>) no-repeat">
+<!-- <footer class="py-5 bg-dark" style="background: url(img/bg-footer.jpg) no-repeat"> -->
+    
+    <!-- quitar luego del coronavirus -->
+    <!--
+    <div class="container">
+          <div class="col-lg-12">
+          <div class="alert alert-secondary" role="alert">
+        <p>
+   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </p>
+  <h4 class="alert-heading">IMPORTANTE!</h4>
+  <p>Como es de publico conocimiento y siguiendo la cuarentena establecida por el gobierno, solamente estamos atendiendo al publico via mail en:</p>
+  <hr>
+  <p class="mb-0"><i class="fas fa-envelope"></i> capacitacion@red.frgp.utn.edu.ar</p>
+</div>
+      </div>
+      </div>
+    -->
+    <!-- info coronavirus -->
+    
+    <div class="container text-white" >
+      <div class="row">
+
+      <div class="col-lg-6">
+          <h3>ALBERTO PRIMAVERA</h3><small>Broker seguros</small>
+        <p>
+          <i class="fas fa-map-marker"></i> Av. Libertador 14492 PB Loc. 1 Martinez, Bs. As.<br>
+           <i class="fas fa-phone"></i> (011) 4793-8493 / 9828<br>
+           <i class="fab fa-whatsapp"></i> +54 (011) 2331-3661<br>
+           <i class="fab fa-whatsapp"></i> +54 (011) 6051-7066<br>
+           <i class="fab fa-whatsapp"></i> +54 (011) 6051-7190<br>
+          <i class="fas fa-envelope"></i> seguros@albertoprimavera.com.ar<br>
+          <i class="fas fa-clock"></i> Lun. a Vie. de 10 a 18hs.<br>
+          <i class="fas fa-ban"></i> Sábados y Domingos CERRADO.
+        </p>
+      </div>
+
+      <!--    
+      <div class="col-lg-4">
+        <h3>SECCIONES</h3>
+        <p>
+          <button type="button" class="btn btn-secondary">WEB ODONTIT</button> 
+          <button type="button" class="btn btn-dark">NOVEDADES</button> 
+          <button type="button" class="btn btn-secondary">CAPACITACIÓN IN COMPANY UTN</button> 
+          <button type="button" class="btn btn-dark">SERVICIOS TECNOLÓGICOS</button> 
+          <button type="button" class="btn btn-secondary">CULTURA</button>
+        </p>
+      </div>
+      -->    
+
+      <div class="col-lg-6">
+        <h3>UBICACIÓN</h3>
+        <p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.926488854262!2d-58.495961584231914!3d-34.4793890584384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1bb3aa17afd%3A0xf1df1c03fa8f411d!2sAlberto%20Primavera!5e0!3m2!1ses!2sar!4v1601734214149!5m2!1ses!2sar" width="500" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <!--<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3289.844223659528!2d-58.623695!3d-34.456102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca48d22673f87%3A0x8775d1ae9173ba5c!2sUniversidad+Tecnol%C3%B3gica+Nacional+-+Facultad+regional+Gral.+Pacheco+-+S.E.U.!5e0!3m2!1ses-419!2sar!4v1430998567537' width='270' height='200' frameborder='0' style='border:0'></iframe>-->
+        </p>
+      </div>
+
+      <div class="col-lg-12"><p><br></p></div>
+
+      <div class="col-lg-6">
+        <h3>MANTENTE INFORMADO/A</h3>
+        <p>
+            <a href="https://www.albertoprimavera.com.ar" target="_blank" title="ir a la WEB" class="btn btn-light btn-lg"><i class="fab fa-chrome"></i></a> &nbsp;&nbsp;
+          <a href="https://www.facebook.com/segurosalbertoprimavera" title="ir a FACEBOOK" target="_blank" class="btn btn-light btn-lg"><i class="fab fa-facebook-f"></i></a> &nbsp;&nbsp;
+          <a href="https://www.instagram.com/albertoprimaveraseguros" title="ir a INSTAGRAM" target="_blank" class="btn btn-light btn-lg"><i class="fab fa-instagram"></i></a> &nbsp;&nbsp;
+        </p>
+      </div>
+
+      <div class="col-lg-6">
+        <h3>BOLETÍN INFORMATIVO</h3>
+        <p>
+          Regístrate para recibir las últimas noticias sobre nuestros anuncios
+        </p>
+        <p>
+          <?= Html::link("comunicacion/suscripcion", "<i class='far fa-envelope'></i> SUSCRIBIRME", "class='btn btn-light btn-lg'") ?>  
+          <!-- <a href="#" class="btn btn-light btn-lg"><i class="far fa-envelope"></i> SUSCRIBIRME</a>   -->
+        </p>
+      </div>
+
+
+      <!-- DATA FISCAL -->
+      <!--
+      <div class="col-lg-4">
+        <p>
+          <a href="#" target="_blank"><img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" width="84" height="95"></a>
+        </p>
+      </div>
+      -->
+
+      <div class="col-lg-12"><p><br></p></div>
+
+      <div class="media position-relative col-lg-12">
+        <!-- <img src="img/logo-footer.png" class="mr-3" alt="Harley-Davidson® Buenos Aires"> -->
+        <?= Html::img("ap-footer.png", "Alberto Primavera broker seguros", "class='mr-3'") ?>
+        <div class="media-body">
+          <p>2020 Alberto Primavera seguros. Todos los derechos reservados.</p>
+        </div>
+      </div>
+
+
+
+      
+
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </footer>

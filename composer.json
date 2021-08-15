@@ -1,0 +1,15 @@
+{
+    "name": "kumbia/core",
+    "description": "KumbiaPHP",
+    "license": "BSD-3-Clause",
+    "autoload": {
+        "classmap": [
+            "core/kumbia/",
+            "core/libs/"
+        ]
+    },    
+    "require": {
+        "mpdf/mpdf": "^7.1",
+        "phpoffice/phpspreadsheet": "^1.10"
+    }
+}

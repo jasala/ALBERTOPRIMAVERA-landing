@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://www.albertoprimavera.com.ar/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+  <link href="https://www.albertoprimavera.com.ar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
+  <title><?= $titulo ?> </title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <!-- <link href="css/modern-business.css" rel="stylesheet"> -->
+  <?php Tag::css('modern-business') ?>
+
+  <!-- Custom styles for icons -->
+  <!-- Bootstrap CDN -->  
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/> -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"/>-->
+  <?php Tag::css('bootstrap.min') ?>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
+  <!-- Bootstrap-Iconpicker -->
+  <!--<link rel="stylesheet" href="dist/css/bootstrap-iconpicker.min.css"/>-->
+
+  <!-- Caja flotante para boton whatsapp flotante -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/flotante.css"> -->
+  <?php Tag::css('flotante') ?>
+  
+  
+  <?= Html::includeCss() ?> <!-- IMPRIME ESTILOS -->
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+    <?= View::partial("web/nav") ?>
+  <!-- Navigation -->
+ 
+  <!-- View::content -->
+  <?php View::content() ?>
+
+  <!-- Footer -->
+    <?= View::partial("web/footer") ?>
+  <!-- Footer -->
+
+  <!-- Bootstrap core JavaScript -->
+  <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+  <?php echo Tag::js('vendor/jquery/jquery.min') ?>
+  
+  <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <?php echo Tag::js('vendor/bootstrap/js/bootstrap.bundle.min') ?>
+  
+  <?php echo Tag::js('jquery/jquery.kumbiaphp.min') ?>
+
+</body>
+
+</html>
+

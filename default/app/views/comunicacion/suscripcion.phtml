@@ -1,0 +1,75 @@
+<!-- Page Content -->
+<?php $text = "INFO: Suscripcion a newsletter"; ?> <!-- TEXTO PARA WHATSAPP -->  
+  <div class="container">
+      
+      <a href="https://wa.me/5491123313661?text=<?=$text?>" class="float" target="_blank" class="flotante" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+      
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3"><?= $titulo ?>
+    </h1>
+
+    
+
+    <div class="row">
+        
+
+      <!-- Blog Entries Column -->
+      <div class="col-lg-8 mb-4">
+        <h3>Envianos los siguientes datos</h3>
+        <?= Form::open("comunicacion/suscripcionProcesar") ?>
+        
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Email:</label>
+              <?= Form::email("email", "class='form-control' title='Por favor complete con su email' placeholder='EMAIL' required='required'") ?>
+            </div>
+          </div>
+          <div id="success"></div>
+          <!-- For success/fail messages -->
+          <?= Form::submit("SUSCRIBIRSE", "class='btn btn-primary'") ?>
+          
+        <?= Form::close() ?>
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-lg-4 mb-4">
+        <h3>Alberto Primavera.</h3>
+        <p>
+            <i class="fas fa-map-marker"></i> Av. Libertador 14492 PB Loc. 1 Martinez, Bs. As.<br>
+          <i class="fas fa-phone"></i> (011) 4793-8493 / 9828<br>
+          <i class="fab fa-whatsapp"></i> +54 (011) 2331-3661<br>
+          <i class="fab fa-whatsapp"></i> +54 (011) 6051-7066<br>
+          <i class="fab fa-whatsapp"></i> +54 (011) 6051-7190<br>
+          <i class="fas fa-envelope"></i> seguros@albertoprimavera.com.ar<br>
+          <i class="fas fa-clock"></i> Lun. a Vie. de 10 a 18hs.<br>
+          <i class="fas fa-ban"></i> Sábados y Domingos CERRADO.
+        </p>
+        <hr>
+        <p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.926488854262!2d-58.495961584231914!3d-34.4793890584384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1bb3aa17afd%3A0xf1df1c03fa8f411d!2sAlberto%20Primavera!5e0!3m2!1ses!2sar!4v1601734214149!5m2!1ses!2sar" width="350" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </p>
+      </div>
+      
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+  
+  <?php
+    function mesCastellano ($fecha) {
+        $fecha = substr($fecha, 0, 10);
+        //$numeroDia = date('d', strtotime($fecha));
+        //$dia = date('l', strtotime($fecha));
+        $mes = date('F', strtotime($fecha));
+        //$anio = date('Y', strtotime($fecha));
+        $meses_ES = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+        $meses_EN = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+        $nombreMes = str_replace($meses_EN, $meses_ES, $mes);
+        $nombreMes = strtoupper($nombreMes);
+        return $nombreMesTresCaracteres = substr($nombreMes, 0, 3);
+      }
+  ?>

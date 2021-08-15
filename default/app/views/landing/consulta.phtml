@@ -1,0 +1,179 @@
+<!-- Page Content -->
+<?php $text = "INFO: ".$Campania->asunto; ?> <!-- TEXTO PARA WHATSAPP -->  
+  <div class="container">
+      
+      <a href="https://wa.me/5491123313661?text=<?=$text?>" class="float" target="_blank" class="flotante" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+      
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3"><?= $Campania->nombre ?>
+    </h1>
+
+    
+
+    <div class="row">
+        
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+
+        
+            <!-- Blog Post -->
+        <div class="card mb-4">
+          <?= Html::img($img_campania, $Campania->nombre, "class='card-img-top'") ?> 
+          <!-- <img class="card-img-fluid" src="http://placehold.it/750x300" alt="Card image cap"> -->
+          <div class="card-body">
+            <?php $text = "INFO: ".$Campania->asunto; ?>  
+            <strong>ESTAMOS ONLINE! Consulte ahora mismo -> 
+            <a class="text-success" href="https://wa.me/5491123313661?text=<?=$text?>"><i class="fab fa-whatsapp text-success"></i>+54 011 2331-3661</a>
+            </strong>
+             <div><?= $Campania->texto ?></div>
+              
+          </div>
+          
+        </div>
+            <hr>
+        
+         
+           
+            
+            
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4" id="consultar">
+          <div class="card">
+            <div class="card-header">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item active">
+                  <a class="nav-link active" id="consultas-tab" data-toggle="tab" href="#consultas" role="tab" aria-controls="consultas"
+                    aria-selected="true">CONSULTAS</a>
+                </li>
+              </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="consultas" role="tabpanel" aria-labelledby="consultas-tab">
+                  <?= Form::open("comunicacion/consultaPorCampania") ?>
+               <!-- Search Widget -->
+                <div class="card mb-4">
+                  <!-- <h5 class="card-header">Search</h5> -->
+                  <div class="card-body">
+                    <div>
+                        <?= $Campania->asunto ?>
+                        <?= Form::hidden("campania_id", "", $Campania->id) ?>  
+                        <?= Form::hidden("canal", "", $canal) ?>  
+                        <br>
+                    </div>
+                      <div>
+                           <?= Form::text("nombre", "class='form-control' title='Por favor complete con su nombre y apellido' placeholder='NOMBRE y APELLIDO' required='required'") ?>
+                        <br>
+                    </div>
+                    <div>
+                        <?= Form::email("email", "class='form-control' title='Por favor complete con su email' placeholder='EMAIL' required='required'") ?>
+                        <br>
+                    </div>
+                    <div>
+                      <?= Form::text("celular", "class='form-control' title='Por favor complete con su celular' placeholder='CELULAR'") ?>
+                        <br>
+                    </div>   
+                    <div>
+                        <label>Producto de interes:</label>
+                        <?= Form::select("productoId", $vectorProductos, "class='form-control'", $Campania->producto_id) ?>
+                        <br>
+                    </div>
+                      <div>
+                      <?= Form::textarea("consulta", "class='form-control' title='Por favor, complete con su consulta' required='required'", "CONSULTA: Por favor, solicito asesoramiento") ?>
+                        <br>
+                    </div>
+                      <div>
+                          
+                      <span class="input-group-btn">
+                        <?= Form::submit("Consultar!", "class='btn btn-primary'") ?>  
+                        
+                        <!-- <button class="btn btn-secondary" type="button">Go!</button> -->
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                    <?= Form::close() ?>
+              </div>
+              
+            </div>
+            </div>
+            
+          </div>
+      
+          
+
+        
+
+        <!-- Categories Widget -->
+        <!--
+        <div class="card my-4">
+          <h5 class="card-header">SEDES</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">Web Design</a>
+                  </li>
+                  <li>
+                    <a href="#">HTML</a>
+                  </li>
+                  <li>
+                    <a href="#">Freebies</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">JavaScript</a>
+                  </li>
+                  <li>
+                    <a href="#">CSS</a>
+                  </li>
+                  <li>
+                    <a href="#">Tutorials</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+
+        <!-- Side Widget -->
+        <!--
+        <div class="card my-4">
+          <h5 class="card-header">Side Widget</h5>
+          <div class="card-body">
+            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+          </div>
+        </div>
+        -->
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+  
+  <?php
+    function mesCastellano ($fecha) {
+        $fecha = substr($fecha, 0, 10);
+        //$numeroDia = date('d', strtotime($fecha));
+        //$dia = date('l', strtotime($fecha));
+        $mes = date('F', strtotime($fecha));
+        //$anio = date('Y', strtotime($fecha));
+        $meses_ES = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+        $meses_EN = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+        $nombreMes = str_replace($meses_EN, $meses_ES, $mes);
+        $nombreMes = strtoupper($nombreMes);
+        return $nombreMesTresCaracteres = substr($nombreMes, 0, 3);
+      }
+  ?>
